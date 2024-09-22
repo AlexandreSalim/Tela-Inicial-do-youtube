@@ -1,14 +1,31 @@
-.header{position: fixed; width: 100%;}
+.header{position: fixed; width: 100%; z-index: 1;}
 
 nav {
     display: flex;
     align-items: center;
-    padding-left: 20px;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding-top: 10px;
+    background-color: white;
     .card {
        
         display: flex;
         align-items: center;
+
+        .mat-icon-menu{
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .mat-icon-menu:hover{
+          background-color: rgb(233, 233, 233);
+          border-radius: 30px; 
+          cursor: pointer;
+         
+        }
+
         svg {
             height: 28px;
             margin-right: 3px;
@@ -98,22 +115,26 @@ nav {
     border-bottom-right-radius: 30px;
     height: 40px;
     width: 60px;
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(233, 233, 233);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
   }
+
+  .search:hover{background-color: rgb(228, 228, 228);}
   
   .mic{
     border-radius: 50%;
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(233, 233, 233);
     display: flex;
     align-items: center;
     justify-content: center;
     width: 40px;
     margin-left: 25px;
   }
+
+  .mic:hover{background-color: rgb(228, 228, 228);}
 
   .sessao{
     display: flex;
@@ -123,34 +144,94 @@ nav {
         border-radius: 30px;
         border: 1px solid rgb(228, 228, 228);
         height: 35px;
-        padding-left: 20px;
         width: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        background-color: white;
+        p{margin: 0; color: rgb(72, 72, 254); font-size: 14px; font-weight:bold;}
     }
-
-    .input-sessao::placeholder{color: rgb(72, 72, 254); position: relative; left: 20px; font-size: 18px;}
+    .input-sessao:hover{background-color: aliceblue; cursor: pointer;}
 
     .account_circle{
-        position: relative;
-        right: 155px;
-        bottom: 2px;
         font-size: 25px;
         color: rgb(72, 72, 254);
     }
   }
 
+
   .nav-colum{
-    width: 50px;
+    width: 70px;
     height: 50vh;
     display: flex;
     justify-content: space-around;
-    padding: 10px;
+    align-items: center;
+    padding-left: 9px;
     flex-direction: column;
 
-    div{
+    &_elementos{
         display: flex;
         align-items: center;
+        justify-content: center;
         flex-direction: column;
+        width: 70px;
+        height: 70px;
 
-        p{font-size: 10px; font-family: sans-serif;}
+        p{font-size: 10px; font-family: sans-serif; margin: 0;}
     }
+
+    &_elementos:hover{background-color: rgb(233, 233, 233); border-radius: 10px; cursor: pointer;}
   }
+
+  .buttons-famosos{
+    background-color: white;
+    width: 93vw;
+    position: fixed;
+    margin: 0 0 0 8vw;
+
+    button{
+      border-radius: 5px;
+      height: 30px;
+      min-width: 70px;
+      border: none;
+      font-weight: bold;
+      font-family: sans-serif;
+      font-size: 15px;
+    }
+    button:hover{background-color:rgb(233, 233, 233);}
+
+  }
+
+
+  @media (min-width: 390px) and (max-width: 1023px) {
+    .nav-colum{display: none;}
+    .buttons-famosos{margin: 0; gap: 5px;button{font-size: small;}}
+    .InputContainer{display: none;}
+    .search{border: none; border-radius: unset; width: 24px; background-color: unset;}
+    .mic{display: none;}
+    nav .card a{margin: 0;}
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .mic{display: flex;}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .InputContainer{display: flex; width: 250px;}
+  .search{border-top-right-radius: 30px; border-bottom-right-radius: 30px; width: 60px; background-color: rgb(233, 233, 233);}
+
+}
+
+@media (min-width: 1280px) {
+  .nav{gap: 95px; justify-content:center;}
+  .InputContainer{display: flex; width: 500px;}
+}
+
+@media (min-width: 1536px) {
+  .nav{gap: 220px;}
+}
+
+@media (min-width: 2000px) {
+  .nav{gap: 455px;}
+}
