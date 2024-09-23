@@ -13,17 +13,25 @@
         
     } 
     .video{background-color: wheat; border-radius: 10px; height: 210px;}
+    .h1{text-align: left;width: 100%;}
 }
 
 @media (min-width: 390px) and (max-width: 1023px) {
     .div-pai{display: flex; flex-direction: column; margin-left: 0;}
     .video{height: 180px !important;}
+    .h1{width: 90% !important;}
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+    .h1{width: 55% !important;}
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
     .div-pai{display: grid;}
-  }
+    .h1{width: 100% !important;}
+}
 
-  @media (min-width: 1280px) {
+@media (min-width: 1280px) {
     .video{height: 280px !important;}
-  }
+    .h1{width: 100% !important;}
+}

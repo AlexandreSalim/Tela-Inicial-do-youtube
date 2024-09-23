@@ -167,7 +167,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-left: 9px;
+    padding-left: 20px;
     flex-direction: column;
 
     &_elementos{
@@ -198,15 +198,16 @@ nav {
       font-weight: bold;
       font-family: sans-serif;
       font-size: 15px;
+      background-color: rgb(233, 233, 233);
     }
-    button:hover{background-color:rgb(233, 233, 233);}
+    button:hover{background-color:rgb(228, 228, 228);}
 
   }
 
 
   @media (min-width: 390px) and (max-width: 1023px) {
     .nav-colum{display: none;}
-    .buttons-famosos{margin: 0; gap: 5px;button{font-size: small;}}
+    .buttons-famosos{margin: 0; gap: 5px;width: 100vw;button{font-size: small;}}
     .InputContainer{display: none;}
     .search{border: none; border-radius: unset; width: 24px; background-color: unset;}
     .mic{display: none;}
@@ -226,12 +227,18 @@ nav {
 @media (min-width: 1280px) {
   .nav{gap: 95px; justify-content:center;}
   .InputContainer{display: flex; width: 500px;}
+  
+  .nav-colum{
+    padding-left: 35px;
+  }
 }
 
 @media (min-width: 1536px) {
   .nav{gap: 220px;}
+  .nav-colum{padding-left: 45px;}
 }
 
 @media (min-width: 2000px) {
   .nav{gap: 455px;}
+  .nav-colum{padding-left: 40px;}
 }

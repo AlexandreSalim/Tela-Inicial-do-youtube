@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './conteudo.component.scss'
 })
 export class ConteudoComponent {
- Titulo: any[] = ["titulo 1","titulo 2","titulo 3","titulo 4","titulo 5","titulo 6","titulo 7","titulo 8",]
+ Titulo: any[] = ["titulo 1","titulo 2","titulo 3","titulo 4","titulo 5","titulo 6","titulo 7","titulo 8",];
 }
